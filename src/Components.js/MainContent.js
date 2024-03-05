@@ -8,6 +8,7 @@ import icoGmail from "../assets/icon-gmail.png"
 import icoReact from "../assets/react.png"
 import icoTailwind from "../assets/tailwind.png"
 import icoJava from "../assets/java.png"
+import iconGithub from "../assets/icon-github.png"
 // Componentes
 import CardsComponent from "./CardsComponent";
 import SkillCard from "./SkillCard";
@@ -103,6 +104,7 @@ const MainContent = () => {
           <ButtonContact icon={icoLinkedin} url="https://www.linkedin.com/in/andy-mota-moreno/" />
           <ButtonContact icon={icoWhatsapp} url="https://wa.me/529511621262"/>
           <ButtonContact  icon={icoGmail} url="mailto:andy.mota.moreno@gmail.com"/>
+          <ButtonContact  icon={iconGithub} url="https://github.com/antrick"/>
         </div>
 
       </div>
