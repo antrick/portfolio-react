@@ -7,6 +7,7 @@ import icoWhatsapp from "../assets/icon-whatsapp.png"
 import icoGmail from "../assets/icon-gmail.png"
 import icoReact from "../assets/react.png"
 import icoTailwind from "../assets/tailwind.png"
+import icoJava from "../assets/java.png"
 // Componentes
 import CardsComponent from "./CardsComponent";
 import SkillCard from "./SkillCard";
@@ -88,6 +89,7 @@ const MainContent = () => {
             
               <SkillCard text="React" icon={icoReact} />
               <SkillCard text="Tailwind" icon={icoTailwind} />
+              <SkillCard text="Java" icon={icoJava} />
             
           </div>
         </div>
