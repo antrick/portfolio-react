@@ -9,6 +9,7 @@ import icoReact from "../assets/react.png"
 import icoTailwind from "../assets/tailwind.png"
 import icoJava from "../assets/java.png"
 import iconGithub from "../assets/icon-github.png"
+import iconTypescript from "../assets/typescript.png"
 // Componentes
 import CardsComponent from "./CardsComponent";
 import SkillCard from "./SkillCard";
@@ -89,6 +90,7 @@ const MainContent = () => {
           <div className="flex flex-wrap rounded-lg  ">
             
               <SkillCard text="React" icon={icoReact} />
+              <SkillCard text="Typescript" icon={iconTypescript} />
               <SkillCard text="Tailwind" icon={icoTailwind} />
               <SkillCard text="Java" icon={icoJava} />
             
