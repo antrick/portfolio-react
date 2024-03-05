@@ -37,7 +37,8 @@ const Header = () => {
           <div className="ml-auto lg:flex lg:items-center hidden sm:flex">
             {/* <a href="" className=" block px-2 py-1 dark:text-white font-semibold rounded-xl hover:text-blue-900 dark:hover:text-hover-blue">Sobre mí</a> */}
             <a href="#experience" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Experiencia</a>
-            <a href="#skills" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Contacto</a>
+            <a href="#skills" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Habilidades</a>
+            <a href="#contact" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Contacto</a>
           </div>
 
 
@@ -62,10 +63,10 @@ const Header = () => {
 
       <div class={`navbar-menu relative z-50 ${isOpen ? '' : 'hidden'}`}>
         <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-50"></div>
-        <nav class="fixed bg-white dark:bg-gray-600 top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto">
+        <nav class="fixed bg-white dark:bg-custom-dark top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto">
 
-            <div class="flex items-center mb-8">
-                <a class="mr-auto text-2xl font-bold text-black text-violet-600 dark:text-gray-100"
+            <div class="flex items-center mb-8 border-b-2">
+                <a class="mr-auto text-2xl font-bold dark:text-white"
                     href="https://tailwindflex.com/">
                     {'{'} A.M. {'}'}
                 </a>
@@ -79,9 +80,15 @@ const Header = () => {
                 </button>
             </div>
 
-            <div class=" relative mx-auto text-gray-600">
+            <div class="text-gray-600 ">
                 
+              <div className=''>
+                <a href="#experience" onClick={() => setIsOpen(!isOpen)} className=" mt-1 block px-2 py-4 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2 border-b-2">Experiencia</a>
+                <a href="#skills" onClick={() => setIsOpen(!isOpen)} className=" mt-1 block px-2 py-4 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2 border-b-2">Habilidades</a>
+                <a href="#contact" onClick={() => setIsOpen(!isOpen)} className=" mt-1 block px-2 py-4 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2 border-b-2">Contacto</a>
 
+              </div>
+              
              
 
             </div>
