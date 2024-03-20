@@ -97,9 +97,9 @@ const MainContent = () => {
             <p className="text-4xl font-bold ">Participacion en Proyectos:</p>
           </div>
           <div className="flex flex-wrap md:flex-row  md:justify-center items-center py-10">
+            <ProjectCard title="System Program +" tools={toolsSystemProgram} text="Creacion y Actualizacion de funcionalidad en modulos y pantallas" imgProject={imgScreenProgram} imageAlt="program" />
             <ProjectCard title="CMR App" tools={toolsCmrApp} text="Desarrollo de pantallas para la primera version de la aplicación" imgProject={imgScreenLoginCmr} imageAlt="screen-cmr" />
             <ProjectCard title="Program + App" tools={toolsProgramApp} text="Actualizacion de funcionalidad y diseño en pantallas" imgProject={imgScreenLoginMindcan} imageAlt="screen-mindcan" />
-            <ProjectCard title="System Program +" tools={toolsSystemProgram} text="Creacion y Actualizacion de funcionalidad en modulos y pantallas" imgProject={imgScreenProgram} imageAlt="program" />
             
           </div>
 
