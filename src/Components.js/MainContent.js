@@ -126,10 +126,12 @@ const MainContent = () => {
           <span>Mayor experiencia: </span>
         </div>
         <div className="flex justify-center items-center ">
-          <div className="flex flex-wrap rounded-lg  ">
+          <div className="flex flex-wrap rounded-lg justify-center">
+            
             {skillsArray.map((skill) => (
               <SkillCard key={skill.text} text={skill.text} icon={skill.icon} />
             ))}
+            
           </div>
         </div>
       </div>
@@ -139,7 +141,7 @@ const MainContent = () => {
           <span>Basico: </span>
         </div>
         <div className="flex justify-center items-center ">
-          <div className="flex flex-wrap rounded-lg  ">
+          <div className="flex flex-wrap rounded-lg justify-center">
             
               <SkillCard text="Flutter" icon={imgFlutter} />
               <SkillCard text="React" icon={icoReact} />
