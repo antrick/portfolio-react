@@ -10,40 +10,44 @@ import icoTailwind from "../assets/tailwind.png"
 import icoJava from "../assets/java.png"
 import iconGithub from "../assets/icon-github.png"
 import iconTypescript from "../assets/typescript.png"
-import imgScreenLoginMindcan from "../assets/mindcan-login.webp"
-import imgScreenLoginCmr from "../assets/screen-login.jpeg"
-import imgScreenProgram from "../assets/program.png"
-import imgLaravel from "../assets/icon-laravel.png"
+
+// import imgScreenLoginMindcan from "../assets/mindcan-login.webp"
+// import imgScreenLoginCmr from "../assets/screen-login.jpeg"
+// import imgScreenProgram from "../assets/program.png"
+
+// import imgLaravel from "../assets/icon-laravel.png"
 import imgFlutter from "../assets/icon-flutter.png"
-import iconBootstrap from '../assets/icon-bootstrap.png';
-import iconJs from '../assets/icon-js.png';
-import iconJquery from '../assets/icon-jquery.png';
+// import iconBootstrap from '../assets/icon-bootstrap.png';
+// import iconJs from '../assets/icon-js.png';
+// import iconJquery from '../assets/icon-jquery.png';
 // Componentes
 import CardsComponent from "./CardsComponent";
 import SkillCard from "./SkillCard";
 import ScrollToTopButton from "./ScrollToTopButton";
+import ButtonContact from "./ButtonContact";
+import ProjectCard from "./ProjectCard";
 // Datos locales
 import skillsArray from "../localData/skillsArray";
 import { cmrSkills, hmsSkills } from "../localData/experienceData";
-import ButtonContact from "./ButtonContact";
-import ProjectCard from "./ProjectCard";
+import { projects } from "../localData/projectsData";
 
-const toolsCmrApp = [
-  {img: imgLaravel, name: 'laravel'},
-  {img: imgFlutter, name: 'flutter'},
-];
 
-const toolsProgramApp = [
-  {img: imgLaravel, name: 'laravel'},
-  {img: icoReact, name: 'react'},
-];
+// const toolsCmrApp = [
+//   {img: imgLaravel, name: 'laravel'},
+//   {img: imgFlutter, name: 'flutter'},
+// ];
 
-const toolsSystemProgram = [
-  {img: imgLaravel, name: 'laravel'},
-  {img: iconBootstrap, name: 'bootstrap'},
-  {img: iconJquery, name: 'jquery'},
-  {img: iconJs, name: 'javascript'},
-];
+// const toolsProgramApp = [
+//   {img: imgLaravel, name: 'laravel'},
+//   {img: icoReact, name: 'react'},
+// ];
+
+// const toolsSystemProgram = [
+//   {img: imgLaravel, name: 'laravel'},
+//   {img: iconBootstrap, name: 'bootstrap'},
+//   {img: iconJquery, name: 'jquery'},
+//   {img: iconJs, name: 'javascript'},
+// ];
 
 const MainContent = () => {
   return (
@@ -92,19 +96,29 @@ const MainContent = () => {
         </div>
       </div>
 
-      <div className="container rounded-lg my-4" id="experience">
+      <div className="container rounded-lg my-4" id="projects">
           <div className="flex flex-col justify-center items-center mb-2">
             <p className="text-4xl font-bold ">Participacion en Proyectos:</p>
           </div>
           <div className="flex flex-wrap md:flex-row  md:justify-center items-center py-10">
-            <ProjectCard title="System Program +" tools={toolsSystemProgram} text="Creacion y Actualizacion de funcionalidad en modulos y pantallas" imgProject={imgScreenProgram} imageAlt="program" />
-            <ProjectCard title="CMR App" tools={toolsCmrApp} text="Desarrollo de pantallas para la primera version de la aplicación" imgProject={imgScreenLoginCmr} imageAlt="screen-cmr" />
-            <ProjectCard title="Program + App" tools={toolsProgramApp} text="Actualizacion de funcionalidad y diseño en pantallas" imgProject={imgScreenLoginMindcan} imageAlt="screen-mindcan" />
+            {projects.map((project) => (
+              <div key={project.id}>
+                <ProjectCard 
+                  id={project.id} 
+                  title={project.title} 
+                  url={project.url} 
+                  text={project.description} 
+                  tools={project.tools} 
+                  imgProject={project.imgProject} 
+                  imageAlt={project.txtAltImage}
+                />
+                </div>
+            ))}
             
           </div>
 
           
-      </div>
+      </div>  
 
       <div className="container rounded-lg my-4" id="skills">
         <div className="flex flex-col justify-center items-center w-full">

@@ -2,8 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import '../styles.css';
 import { useTheme } from '../hooks/useTheme';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+
+  const location = useLocation();
 
     const {darkMode,setDarkMode} = useTheme();
     // const [menuOpen, setMenuOpen] = useState(false);
@@ -29,23 +32,31 @@ const Header = () => {
   return (
     <header className='py-6 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3 dark:bg-custom-dark '>
 
-      <nav class="relative px-4 py-2 flex justify-between items-center rounded dark:bg-custom-dark border-b-2 dark:border-gray-600 w-full">
-          {/* <h1 className="text-3xl ">{'{'} A.M. {'}'}</h1> */}
+      <nav className="relative px-4 py-2 flex justify-between items-center rounded dark:bg-custom-dark border-b-2 dark:border-gray-600 w-full">
+          <Link to={'/'}>
           <h1 className="text-3xl ">{'{ '}A.M. {'}'}</h1>
-
+          </Link>
 
           <div className="ml-auto lg:flex lg:items-center hidden sm:flex">
-            {/* <a href="" className=" block px-2 py-1 dark:text-white font-semibold rounded-xl hover:text-blue-900 dark:hover:text-hover-blue">Sobre mí</a> */}
-            <a href="#experience" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Experiencia</a>
-            <a href="#skills" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Habilidades</a>
-            <a href="#contact" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Contacto</a>
+          {location.pathname === '/' ? (
+            <>
+              <a href="#experience" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Experiencia</a>
+              <a href="#projects" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Proyectos</a>
+              <a href="#skills" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Habilidades</a>
+              <a href="#contact" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Contacto</a>
+            </>
+            ):(
+              <Link to={'/'}>
+                <a href="#contact" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Inicio</a>
+              </Link>
+            )}
           </div>
 
 
         <div className='sm:hidden ml-auto'>
 
-        <button onClick={() => setIsOpen(!isOpen)}  class="navbar-burger flex items-center  dark:text-white p-1" id="navbar_burger">
-                <svg class="block h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <button onClick={() => setIsOpen(!isOpen)}  className="navbar-burger flex items-center  dark:text-white p-1" id="navbar_burger">
+                <svg className="block h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <title>Hamberger menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
@@ -61,13 +72,13 @@ const Header = () => {
 
       </nav>
 
-      <div class={`navbar-menu relative z-50 ${isOpen ? '' : 'hidden'}`}>
-        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-50"></div>
-        <nav class="fixed bg-white dark:bg-custom-dark top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto">
+      <div className={`navbar-menu relative z-50 ${isOpen ? '' : 'hidden'}`}>
+        <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-50"></div>
+        <nav className="fixed bg-white dark:bg-custom-dark top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto">
 
-            <div class="flex items-center mb-8 border-b-2">
-                <a class="mr-auto text-2xl font-bold dark:text-white"
-                    href="https://tailwindflex.com/">
+            <div className="flex items-center mb-8 border-b-2">
+                <a className="mr-auto text-2xl font-bold dark:text-white"
+                    href="/">
                     {'{'} A.M. {'}'}
                 </a>
 
@@ -80,13 +91,21 @@ const Header = () => {
                 </button>
             </div>
 
-            <div class="text-gray-600 ">
+            <div className="text-gray-600 ">
                 
               <div className=''>
+              {location.pathname === '/' ? (
+                <>
                 <a href="#experience" onClick={() => setIsOpen(!isOpen)} className=" mt-1 block px-2 py-4 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2 border-b-2">Experiencia</a>
+                <a href="#projects" onClick={() => setIsOpen(!isOpen)} className=" mt-1 block px-2 py-4 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2 border-b-2">Proyectos</a>
                 <a href="#skills" onClick={() => setIsOpen(!isOpen)} className=" mt-1 block px-2 py-4 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2 border-b-2">Habilidades</a>
                 <a href="#contact" onClick={() => setIsOpen(!isOpen)} className=" mt-1 block px-2 py-4 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2 border-b-2">Contacto</a>
-
+                </>
+                ):(
+              <Link to={'/'}>
+                <a href="#contact" className=" mt-1 block px-2 py-1 dark:text-white font-semibold rounded-xl dark:hover:text-hover-blue sm:mt-0 sm:ml-2">Inicio</a>
+              </Link>
+            )}
               </div>
               
              
