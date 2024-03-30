@@ -21,9 +21,18 @@
     
    
     
-    &:hover{ opacity:100%;  margin-top:-5px;  filter:grayscale(0%);
+    /* &:hover{ opacity:100%;  margin-top:-5px;  filter:grayscale(0%);
      box-shadow: 0 4px 8px rgba(0,0,0,.3)
-   }
-    &:active{transform:scale(0.8)}
+   } */
+    /* &:active{transform:scale(0.8)} */
     
+}
+
+.listDetails li img:hover{
+    opacity:100%;  margin-top:-5px;  filter:grayscale(0%);
+     box-shadow: 0 4px 8px rgba(0,0,0,.3)   
+}
+
+.listDetails li img:active{
+    transform:scale(0.8)
 }
