@@ -1,6 +1,6 @@
 import React from "react";
 // Imagenes
-import imgProfile from "../assets/picture-blank.png";
+import imgProfile from "../assets/profile-icon.webp";
 import bgTools from "../assets/tools2.png";
 import icoLinkedin from "../assets/icon-linkedin.png"
 import icoWhatsapp from "../assets/icon-whatsapp.png"
@@ -62,6 +62,7 @@ const MainContent = () => {
               <img
                 src={imgProfile}
                 alt="img-profile"
+                style={{ width: '35vh', height: '40vh' }}
                 className="rounded my-img "
               />
             </div>
