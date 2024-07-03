@@ -3,7 +3,7 @@ import React from "react";
 import imgProfile from "../assets/profile-icon.webp";
 import bgTools from "../assets/tools2.png";
 import icoLinkedin from "../assets/icon-linkedin.png"
-import icoWhatsapp from "../assets/icon-whatsapp.png"
+// import icoWhatsapp from "../assets/icon-whatsapp.png"
 import icoGmail from "../assets/icon-gmail.png"
 import icoReact from "../assets/react.png"
 import icoTailwind from "../assets/tailwind.png"
