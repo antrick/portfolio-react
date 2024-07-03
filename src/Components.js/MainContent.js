@@ -70,7 +70,7 @@ const MainContent = () => {
             <div className="flex flex-wrap md:w-1/3 text-justify p-2">
               <h1 className="font-bold">¡Hola a todos!</h1>
               <p>
-              Mi nombre es Andy Mota Moreno, soy Ingeniero en Sistemas Computacionales con experiencia como desarrollador web. Me apasiona involucrarme en cada proyecto, aportar y aprender en cada uno de ellos.
+              Mi nombre es Andy Moreno, soy Ingeniero en Sistemas Computacionales con experiencia como desarrollador web. Me apasiona involucrarme en cada proyecto, aportar y aprender en cada uno de ellos.
               </p>
             </div>
           </div>
@@ -160,7 +160,7 @@ const MainContent = () => {
         </div>
         <div className="flex justify-center items-center flex-wrap">
           <ButtonContact icon={icoLinkedin} url="https://www.linkedin.com/in/andy-mota-moreno/" />
-          <ButtonContact icon={icoWhatsapp} url="https://wa.me/529511621262"/>
+          {/* <ButtonContact icon={icoWhatsapp} url="https://wa.me/529511621262"/> */}
           <ButtonContact  icon={icoGmail} url="mailto:andy.mota.moreno@gmail.com"/>
           <ButtonContact  icon={iconGithub} url="https://github.com/antrick"/>
         </div>
